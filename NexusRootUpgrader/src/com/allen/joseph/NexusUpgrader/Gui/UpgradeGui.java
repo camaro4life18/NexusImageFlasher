@@ -25,6 +25,11 @@ import javafx.stage.FileChooser;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 
+/**
+ * 
+ * @author Joseph Allen
+ *
+ */
 public class UpgradeGui{
 	public static EventBus eventBus = new EventBus();
 	public final static int VISIBLE = 0;
@@ -40,6 +45,11 @@ public class UpgradeGui{
 	private Button flash = null;
 	private TextArea flashResultsTextArea = null;
 	
+	/**
+	 * 
+	 * @param primaryStage
+	 * @throws Exception
+	 */
 	public void buildUi(Stage primaryStage) throws Exception {
 		this.primaryStage = primaryStage;
 		EventBusUtil.register(this);
@@ -96,6 +106,12 @@ public class UpgradeGui{
 		primaryStage.show();
 	}
 	
+	/**
+	 * 
+	 * @param buttonText
+	 * @param textFieldToEdit
+	 * @return
+	 */
 	private Button createButton(String buttonText, TextField textFieldToEdit){
 		Button button = new Button(buttonText);
 		button.setOnAction(new EventHandler<ActionEvent>(){
@@ -110,6 +126,10 @@ public class UpgradeGui{
 		return button;
 	}
 	
+	/**
+	 * Returns the menu for the Gui
+	 * @return
+	 */
 	private MenuBar createMenu(){
 		MenuBar menuBar = new MenuBar();
 		
@@ -138,7 +158,10 @@ public class UpgradeGui{
 		
 		return menuBar;
 	}
-	
+	/**
+	 * Handles Events from the EventBus
+	 * @param event
+	 */
 	@Subscribe
 	public void progressEvent(String event){
 		System.out.println("Processing Event: " + event.toString());

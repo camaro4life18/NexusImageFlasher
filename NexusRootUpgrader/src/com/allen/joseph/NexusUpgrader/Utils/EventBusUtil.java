@@ -7,6 +7,11 @@ import com.google.common.eventbus.EventBus;
 
 import javafx.application.Platform;
 
+/**
+ * 
+ * @author Joseph Allen
+ *
+ */
 public class EventBusUtil {
 	private static EventBus eventBus = new EventBus();
 	private static List<Object> eventListenerList = new ArrayList<Object>();

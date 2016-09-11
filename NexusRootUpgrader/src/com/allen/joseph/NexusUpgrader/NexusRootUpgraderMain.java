@@ -5,6 +5,11 @@ import com.allen.joseph.NexusUpgrader.Gui.UpgradeGui;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
+/**
+ * 
+ * @author Joseph Allen
+ *
+ */
 public class NexusRootUpgraderMain extends Application{
 	
 	static public void main(String[] args){
